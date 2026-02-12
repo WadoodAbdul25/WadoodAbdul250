@@ -1,0 +1,135 @@
+/* Beginner-friendly styling for resume.html */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222222;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #555555;
+}
+
+#navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#navbar a {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+.section-card,
+#coursework,
+#contact {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+/* Specificity note:
+   `h2 color` is an element selector.
+   `.section-card h2 { color }` is a class + element selector (0,1,1),
+   so it wins due to higher specificity. */
+h2 {
+    margin-top: 0;
+    color: #222222;
+}
+
+.section-card h2 {
+    color: #2b6cb0;
+}
+
+#coursework th,
+#contact h2 {
+    margin-top: 0;
+    color: #2b6cb0;
+}
+
+#coursework {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#coursework th,
+#coursework td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+#coursework tr:last-child td {
+    border-bottom: none;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+#projects a,
+#contact a {
+    color: #2b6cb0;
+}
+
+footer#contact p {
+    margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    #navbar ul {
+        gap: 10px;
+    }
+
+    section,
+    #coursework,
+    #contact {
+        margin: 14px 12px;
+        padding: 16px;
+    }
+}

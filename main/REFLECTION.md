@@ -1,0 +1,5 @@
+# Reflection
+
+1. When you open a GitHub Pages link, your browser first checks if it already saved the page. If not, it asks the DNS system to turn the website name into an IP address. Then it connects to that server securely using HTTPS and sends a request asking for the page. GitHub’s servers send back the HTML file, and the browser then requests any extra files like CSS, images, or JavaScript. Once everything is downloaded, the browser displays the page.
+
+2. A Docker container is like a small, self-contained environment where your app runs. You control the software, packages, and settings inside it. GitHub Pages is different because it’s a managed hosting service. You can only upload static files, and GitHub handles the server and setup for you. With Docker you have full control, while with GitHub Pages you get simplicity but less control.
