@@ -170,28 +170,54 @@ footer#contact p {
     margin: 6px 0;
 }
 
-@media (max-width: 600px) {
+/* Task 3: Responsive Media Queries — triggers at 768px (tablet/phone) */
+@media (max-width: 768px) {
+
+    /* --- Typography --- */
     header h1 {
-        font-size: 22px;
+        font-size: 22px;  /* smaller headline on mobile */
     }
 
+    h2 {
+        font-size: 18px;
+    }
+
+    body {
+        font-size: 15px;  /* slightly larger base for readability on small screens */
+    }
+
+    /* --- Navigation: stack vertically --- */
     #navbar {
-        flex-wrap: wrap;
-        padding: 10px 16px;
+        flex-direction: column;  /* logo on top, links below */
+        align-items: flex-start; /* left-align both rows */
+        padding: 12px 16px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+        padding-bottom: 6px;
     }
 
     #navbar ul {
-        gap: 4px;
+        flex-direction: column; /* links stack on top of each other */
+        gap: 0;
+        width: 100%;
     }
 
+    #navbar a {
+        padding: 10px 8px; /* taller tap targets on mobile */
+    }
+
+    /* --- Grid: collapse to 1 column --- */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Sections: tighter margins on small screens --- */
     section,
     #coursework,
     #contact {
-        margin: 14px 12px;
+        margin: 12px 10px;
         padding: 16px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr; /* stack cards on mobile */
     }
 }
